@@ -1,0 +1,59 @@
+Git Commands:
+=============
+
+	"All commands must start with *git* ".
+
+1. git --version:
+    ------------------
+	- Prints the version of the git present in the system
+
+2. git status:
+    --------------
+	- Always gives you information about your working directory.
+	- here working directory refers to the project folder we are working on.
+	
+	- Without any repositories, this command gives an error (without .git in 	   the folder)
+
+	- Example:
+	  -------------
+		C:\Users\JYOTHSNA\Desktop\Git>git status
+		fatal: not a git repository (or any of the parent directories): .git
+
+3. git init:
+    ----------
+	- Used to initialize the Git repository in the folder. (.git - hidden file)
+
+	- Example:
+	  -------------
+		C:\Users\JYOTHSNA\Desktop\Git>git init
+		Initialized empty Git repository in C:/Users/JYOTHSNA/Desktop/Git/.git/
+
+
+4. git add:
+    -------------
+	- This command is used to add files to the staging area.
+	- This command can be written in many ways
+
+		Syntax:
+		-----------
+			git add filename.ext    (for adding one file)
+
+			git add filename1.ext, filename2.ext, ......   (for multiple files)
+
+			git add .       (adds all the files in the folder)
+
+
+5. git commit:
+    -----------------
+	- Used to commit the files.
+
+	Syntax:
+	----------
+		git commit -m "Message in quotes"
+
+	- Inorder to commit, we have to add account credentials.
+	- This can be done by using the following commands:
+		
+		i. git config --global user.email "EmailID"
+
+		ii. git config --global user.name "Name"
