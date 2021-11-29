@@ -316,3 +316,71 @@ Git Commands:
 		git reset --hard HEAD~no.of.commits
 
 	* This is the hard reset command, which removes the latest command and also deletes the file from both staging area and working directory.
+
+
+
+## Deleting Branches:
+     --------------------------
+	- To delete the branches, we use the following commands
+
+		Syntax:
+			git branch -d  branchname  ------>    deletes the branches
+
+			
+			git branch -D branchname   ------->    deletes the branches force fully even though there are merged
+
+			
+			git branch -d  branchname1  branchname2 .....   ------>  to delete multiple branches at a time
+
+
+
+## Commiting the "Detached HEAD" Changes:
+     --------------------------------------------------------------
+	- If we done any changes to the "detached HEAD" mode, then how to get these changes when we switch the branch
+
+	- The solution is to create a new branch, after commiting the changes in the detached HEAD mode
+
+	- And merge this branch with the other branches (of our requirement).
+
+
+
+# .gitignore:
+   ---------------
+	- If our project contains no.of files that are not required in the directory, then we can use ".gitignore"
+
+	- .gitignore helps to ignore the files that are not required. (they can't be committed)
+
+	- This .gitignore file must be created by user manually.
+
+	- For example, if we do not want the "test.log" file then in the .gitignore
+
+		.gitignore file
+
+			test.log
+
+	we can mention the file names that are to be ignored.
+
+	- If we want all the .log files to be ignored, then
+	
+		.gitignore file
+
+			*.log    
+
+	here, "*" refers to all the log files that are to be ignored.
+
+	- If we want all the .log files to be ignored but except one file (eg. test.log) then
+
+		.gitignore file
+			
+			*.log
+			!test.log
+
+	here, "!" indicates except that file, all the other files are ignored
+
+	- For folders that are to be ignored, we can mention as
+
+		.gitignore file
+
+			foldername/ 
+
+	this ignores all the files in that specified folder.
