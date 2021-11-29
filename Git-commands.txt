@@ -210,3 +210,109 @@ Git Commands:
 		git rm filename
 
 	- After that, we can commit the changes of deleting the file.
+
+
+
+
+# Undoing Unstaged Changes:
+   ----------------------------------------
+	- Moving back to the previous changes of the files
+
+	- This can be done by using "checkout" command   (for older Git Versions)
+
+	Syntax:
+		git checkout filename   -----> move back to the previous commit of the file
+
+			(or)
+
+		git checkout .             ------> move back to the previous commit of all the files in the directory
+
+	- Another command to do this change is "restore" command    (for latest Git Versions 2.23.0)
+
+	Syntax:
+		git restore filename    ----> discard the changes of a particular file in working directory
+
+			(or)
+
+		git restore .               ----->  discard the changes of all the files in the directory
+
+
+     * Removing the untracked files from the directory:
+       --------------------------------------------------------------------
+
+	- This can be done by using "clean" command
+
+	Syntax:
+
+		git clean -dn      ------->    this command display the files that are to be removed (just displays the list of files, doesn't delete)
+				         here, -d indicates remove the directories or files
+
+		git clean -df      -------->    this command forcely remove the untracked files from the working directory
+				         here, -f indicates the git to forcely remove the files
+
+
+
+
+# Undoing Staged Changes:
+   -------------------------------------
+	- here, we going to undo the changes done to the files that are in the staging area.
+
+	- In older Git Versions, we require 2 commands to done this undoing
+		
+		a. To bring the staged file to unstaged
+		b. Then undo the change
+
+	- To bring the file to unstaged, we use "reset" command
+
+	Syntax:
+		git reset filename    -----> brings the file to unstaged change
+
+	- Then undo the change using "checkout" command
+
+	Syntax:
+		git checkout filename
+
+	- In lastest Git Versions, the commands to undo the staged changes are "restore", "checkout"
+
+	Syntax:
+		git restore --staged filename    -----> this command moves the file from staged to unstaged changes
+
+	- Then apply the checkout command
+
+	Syntax:
+		git checkout filename
+
+
+# git reset:
+   ------------
+	- the reset commad can be used in many ways.
+
+	Default way of reset command:
+	-------------------------------------------
+
+	Syntax:
+		git reset HEAD~no.of.commits
+
+	here no.of.commits  -----> is a number, that means the no.of.commits that we want to reset.
+
+	* This command removes the latest commit and also moves the file from staged to unstaged area.
+
+	* But doesn't delete the file.
+
+	
+	Soft way of reset command:
+	---------------------------------------
+	Syntax:
+		git reset --soft HEAD~no.of.commits
+
+	* This is the soft reset command, which just deletes the latest commit.
+
+	* The file still exists in the staged area and is not deleted.
+
+	
+	Hard way of reset command:
+	----------------------------------------
+	Syntax:
+		git reset --hard HEAD~no.of.commits
+
+	* This is the hard reset command, which removes the latest command and also deletes the file from both staging area and working directory.
