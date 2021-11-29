@@ -57,3 +57,156 @@ Git Commands:
 		i. git config --global user.email "EmailID"
 
 		ii. git config --global user.name "Name"
+
+
+6. git log:
+    ---------
+	- Gives information about the commits done to the project.
+	- It also displays a lot of other information.
+
+
+7. git checkout:
+    ------------------
+	- Used to jump to particular commit or branch
+	
+	Syntax:
+		git checkout commitID
+
+			(or)
+
+		git checkout branchname
+
+8. git branch:
+    ----------------
+	- Displays all the branches in the project
+
+
+	Syntax:
+		git branch branchname     ------> creates a new branch
+
+	
+	* No need "" for the name of the branch as in the commit command
+	* There must not be spaces in the branch name
+
+
+## Note:
+     ---------
+
+	* Creating a new branch in a simple way
+
+		Syntax:
+
+			git checkout -b branchname
+
+	* This checks for the branch, if exists gives an error that branch already exists.
+
+	* If doesnot exists, then it creates a new branch and switch to it.
+ 
+
+
+9. git merge:
+    ----------------
+	- Used to merge the branches
+
+	Syntax:
+
+		git merge branchname
+
+	here, branchname ---> indicates the branch that is to be merged
+
+	* While executing this command, we must be in the branch to which the files are added.
+
+		Eg: if we want to merge a branch with master branch, then we have to execute this command in master branch
+
+
+
+## Understanding HEAD:
+     ------------------------------
+
+	- HEAD in any branch refers to the latest commit in it.
+
+	- For example:
+		
+			commit d45683c6e0d18a0150716a1825981e4197e098db (HEAD -> second_branch)
+			Author: Jyothsna <writetojyothsna@gmail.com>
+			Date:   Mon Nov 15 14:31:51 2021 +0530
+
+    			Adding second commit
+
+
+	here, HEAD -> second_branch 
+
+		which means that this commit is the latest commit in the second_branch.
+
+
+	- Consider another example:
+
+			commit 69d5e06c8119149d04debb150a5477615cf6ab83 (HEAD -> master, third_branch)
+			Author: Jyothsna <writetojyothsna@gmail.com>
+			Date:   Mon Nov 29 17:58:48 2021 +0530
+
+    			added branches text files
+
+	here, HEAD -> master, third_branch
+
+		which means that this commit is the latest commit in both master, third_branch branches.
+
+
+## Detached HEAD:
+     ------------------------
+
+	* If we want to move back to the command that exists in both the branches, then this commit is called as "Detached commit"
+
+	* The advantage of this detached head is we can to move back to it, as we did in branches
+
+	* We can modify the files, commit the files.
+
+
+
+10. git switch   (in latest versions of Git 2.23.0):
+      ------------------------------------------------------------
+	- This command is used to create and switch between the branches.
+
+	- The difference between the switch and checkout is 
+
+		a. switch is only used for switching between the branches not commits.
+		b. but checkout command is used to switch between the branches and commits.
+
+	Syntax:
+		
+		git switch branchname
+
+		git switch -c branchname   -----> to create a new branch
+
+
+
+## Deleting Data:
+     ---------------------
+	- Deleting the data from the project include
+
+		* Working Directory files (which are already part of previous commit)
+
+		* Unstaged Changes
+
+		* Staged Changes
+
+		* Latest Commits
+
+		* Branches
+
+
+# Deleting Working Directory Files:
+   -----------------------------------------------
+	- here, we are going to delete the files from our working directory
+
+	Syntax:
+		git ls-files    ------>  This command is used to display the files in our staging area
+
+	- even though we delete our file from our folder, it still exists in our staging area.
+
+	- To delete the file, from our working directory use "rm" command
+
+	Syntax:
+		git rm filename
+
+	- After that, we can commit the changes of deleting the file.
