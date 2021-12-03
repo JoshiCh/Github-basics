@@ -384,3 +384,34 @@ Git Commands:
 			foldername/ 
 
 	this ignores all the files in that specified folder.
+
+
+
+
+
+## git stash:
+     --------------
+	- This command is used to save the unstaged changes or unsaved commits.
+
+	- For example, if we are working on a project and you have created some file. Consider you did the first commit after some work on the file.
+	  Later, you added some work to the file and after some time, you want to go back to the previous commit but the latest changes must be                    saved. This can be done by "stash" command
+
+	Syntax:
+			git stash    ------>    saves the unstaged changes
+
+
+			git stash push -m "Message"    -----> pushes the unstaged changes to the list, with a message
+
+		
+			git stash list       ----->   prints the list of stashes that are stored
+
+
+			git stash apply    ------>  this takes to the previous commit of our project
+
+
+			git stash drop <index>    ------>   removes particular stash from the list and merge it with the commit
+
+
+			git stash clear    ------>   to clear the stashes that are saved
+   
+	
