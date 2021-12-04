@@ -436,5 +436,46 @@ Git Commands:
 
 	- Similarly, we do it for the branch, but additionally we have to create a new branch after the checkout.
 
+
+
+
+
+## Deep dive of "merge" command:
+     --------------------------------------------------
+	- There are different types of merges
+		
+		a. Fast-Forward Merge
+		b. Non Fast-Forward Merge
+			(i)  Recursive
+			(ii) Ours
+			(iii)Octopus
+			(iv)Subtree
+
+
+	Fast-Forward Merge type:
+	------------------------------------
+		- This type of merge is applied by the git, when there are no new commits done to the master branch.
+		
+		- When we apply merge command to merge a new branch and master branch, the git simply moves the HEAD forward to the new                                      commit created in the new branch.
+
+		- But it doesn't create a new commit after merging the branches.
+
+
+		Syntax:
+			git merge <branchname>
+
+		- For example, if we have 3 or 4 commits in the new branch and we performed fast-forward merge.
+	
+		- Then in the master branch, we get all the commits that are in the master branch and the HEAD points to both master & new branch
+
+		- If we want all the commits of the new branch in only one commit in the master branch, then we can use "squash" 
+
+		Syntax:
+			git merge --squash "message"
+
+		- This combines all the commits of the new branch but it doesn't create a new commit.
+
+		- We have to create a new commit, to show the change.
+
    
 	
