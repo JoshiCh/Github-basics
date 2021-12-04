@@ -413,5 +413,28 @@ Git Commands:
 
 
 			git stash clear    ------>   to clear the stashes that are saved
+
+
+
+
+
+
+
+## git reflog:
+     --------------
+	- Used to get back the deleted commits or branches.
+
+	Syntax:
+		
+		git reflog     ----->   displays all the details of the deleted commits and branches
+
+	- To get back the deleted commit, first copy the id of that particular commit from "reflog"
+
+	- Use "reset" command to get the commit
+
+		git reset --hard <id>
+
+	- Similarly, we do it for the branch, but additionally we have to create a new branch after the checkout.
+
    
 	
