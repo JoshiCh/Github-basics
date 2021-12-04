@@ -471,7 +471,7 @@ Git Commands:
 		- If we want all the commits of the new branch in only one commit in the master branch, then we can use "squash" 
 
 		Syntax:
-			git merge --squash "message"
+			git merge --squash <branchname>
 
 		- This combines all the commits of the new branch but it doesn't create a new commit.
 
