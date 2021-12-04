@@ -477,5 +477,18 @@ Git Commands:
 
 		- We have to create a new commit, to show the change.
 
+
+
+	Non Fast-Forward Merge:
+	-----------------------------------
+		- This type of merge can be used when we have some commits done in master branch after the creation of the new branch.
+
+		- This non fast-forward merge adds all the commits of the new branch to the master branch and it also creates a new commit with a 		   message of "Merged branch <newbranchname> with master".
+
+		Syntax:
+			git merge --no-ff <branchname>
+
+		- We can also use the "squash" instead of non fast-forward merge in this case.
+
    
 	
