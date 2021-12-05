@@ -1,1 +1,3 @@
 This is the master branch
+
+Some another text is added.
