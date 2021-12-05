@@ -490,5 +490,67 @@ Git Commands:
 
 		- We can also use the "squash" instead of non fast-forward merge in this case.
 
+
+
+
+## rebase:
+     -------------
+	- Instead of using non fast-forward (recursive) command, we can use "rebase" to update the master branch with the commits of new branch.
+
+	- In rebase, the new commit of the master branch will become the base commit for the new branch
+
+	- That means, the git takes all the new commits of the master branch to the new branch and adds the commits of the new branch to this 	  commit.
+	
+	- Then finally it copies the changes of the new branch to the master branch.
+
+	- Important point is that, "rebase" doesn't create move commits it creates new commits. (which means the ids of commits in the new branch                    are different from the ids in the master branch after merging)
+
+	- Hence, it is not recommended to use "rebase" outside the local repository.
+
+	Syntax:
+		git rebase <new branch>
+
    
 	
+
+
+## cherry-pick:
+     -----------------
+	- This command is used to move the specified command from one branch to another branch.
+
+	- But, it creates a new commit in the branch we want to move.
+
+	- The ids of the commits in the branches are different.
+
+	Syntax:
+		git cherry-pick <commit id>
+
+
+## git tag
+     ----------
+	- This command is used to add a tag to the commits.
+
+	- There are two types of tags:
+		(i) light-weight tag
+		(ii) annotated tag
+
+	- Light-weight tag contains only the tag name.
+
+	- Where as annotated tag contains the tag name and other details like "tagger name, mail id, message added".
+
+	Syntax:
+		git tag <tagname>    ------->     light-weight tag
+
+	
+		git tag -a <tagname> -m <message>     ------->     annotated tag
+
+
+ 	- To display the list of the tag, we use the command
+
+	Syntax:
+		git tag
+
+	- To get the details of the commit having particular tag, we use "show" command
+
+	Syntax:
+		git show <tagname>
