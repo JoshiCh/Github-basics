@@ -1,3 +1,23 @@
+## git:
+======
+	- Version Control System
+
+	- Manage Code History
+
+	- Track Changes
+
+
+## github:
+=========
+	- Largest Development Platform
+
+	- Cloud Hosting & Collaboration Provider
+
+	- Git Repository Hosting
+
+
+
+
 Git Commands:
 =============
 
@@ -554,3 +574,32 @@ Git Commands:
 
 	Syntax:
 		git show <tagname>
+
+
+
+
+
+
+
+
+
+
+
+GitHub:
+=======
+
+	# Creating connection between local and remote repository:
+	-----------------------------------------------------------------------------------
+	1. Create a new repository in the GitHub
+	2. To make a connection between local and remote repository, we have to use the following command
+
+		git remote add origin <url of repository>
+
+	3. When executing this command, we have to signin with "Personal Access Token" for verification
+	
+		Creating Personal Access Token:
+		---------------------------------------------
+		1. Go to GitHub Account -> Settings -> Developer Options
+		2. Choose Personal Access Token
+		3. Create a new token, and checkbox the options (except the options having admin things)
+		4. While creating a token, you can change the expiry of the token based on your choice.
