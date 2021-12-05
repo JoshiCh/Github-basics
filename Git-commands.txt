@@ -603,3 +603,11 @@ GitHub:
 		2. Choose Personal Access Token
 		3. Create a new token, and checkbox the options (except the options having admin things)
 		4. While creating a token, you can change the expiry of the token based on your choice.
+
+	4. To add the master branch to the remote repository, we use
+
+		git push origin <branchname>
+
+	
+	Syntax:
+		git branch -a   ------> displays the list of branches in both local and remote repository
